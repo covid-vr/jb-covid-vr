@@ -1,4 +1,4 @@
-name: qe-mini-example
+name: jb-env
 channels:
   - default
 dependencies:

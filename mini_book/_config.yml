@@ -1,10 +1,10 @@
-title : Scientific Python QuickStart
-author: Thomas J. Sargent and John Stachurski
-logo: 'qe-logo-large.png'
+title : COVID-VR
+author: Noemi Maritza Lapa Romero 
+# logo: 'qe-logo-large.png'
 
 # Short description about the book
 description: >-
-  A brief introduction to Python programming for scientific applications.
+  Brief description and results obtained in binary and ternary classification for COVID-19 tasks.
 
 execute:
   execute_notebooks           : cache
@@ -18,12 +18,12 @@ notebook_interface            : "notebook"
 
 # Launch button settings
 repository:
-  url                         : https://github.com/executablebooks/quantecon-mini-example
+  url                         : https://github.com/covid-vr/jb-covid-vr
   path_to_book                : "mini_book"
 
-binder:
-  binderhub_url               : "https://mybinder.org"
-  text                        : "Launch binder"
+# binder:
+#   binderhub_url               : "https://mybinder.org"
+#   text                        : "Launch binder"
 
 # LaTeX settings
 bibtex_bibfiles:
@@ -32,3 +32,17 @@ latex:
   latex_engine                : "xelatex"
   latex_documents:
     targetname: book.tex
+
+parse:
+  myst_enable_extensions:
+    - html_image
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
