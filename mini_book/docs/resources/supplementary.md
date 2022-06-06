@@ -1,14 +1,3 @@
----
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
----
-
 # Supplementary Material
 
 Here, we summarize all the links to our repositories and results. Each repository contains an example of how to execute the contained source code.
