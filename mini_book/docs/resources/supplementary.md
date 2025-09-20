@@ -5,6 +5,27 @@ Here, we summarize all the links to our repositories and results. Each repositor
 ## Full Pipeline
 Our full pipeline presented and detailed in Chapter 5 with its requirements and examples of how to run are available in [[Full Pipeline link]](https://github.com/covid-vr/covid-vr-docker).
 
+
+### Building
+Our project has as main repository [COVID VR Docker](https://github.com/covid-vr/covid-vr-docker)
+Which depends on 3 repositories included into the project:
+- P-HNN Lung Segmentation [[link]](https://github.com/covid-vr/p-hnn-lung-segmentation)
+- Camera Shot Generator[[link]](https://github.com/covid-vr/camera-shots-generator)
+- Video Generator[[link]](https://github.com/covid-vr/video-generator), this one is optional (not used for the model, but can be generated while running the pipeline to have access to a video view of the segmented lung with the transfer function)
+
+> The trained weights of models are lost. You can generate it [using covid-vr-network](https://github.com/covid-vr/covid-vr-network)
+
+Build:
+
+Full pipeline
+
+```docker run -it --gpus all --network host --env="DISPLAY" --env="NVIDIA_DRIVER_CAPABILITIES=compute,utility,display" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/path/to/local/data/:/data/" covid-vr-docker_covidvr:latest python pipeline.py --full_pipeline  --dicom_path /data/dicom/P064```
+
+Full pipeline with video generator:
+
+```docker run -it --gpus all --network host --env="DISPLAY" --env="NVIDIA_DRIVER_CAPABILITIES=compute,utility,display" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/path/to/local/data/:/data/" covid-vr-docker_covidvr:latest python pipeline.py --full_pipeline  --dicom_path /data/dicom/P064 --video```
+
+
 ## Independent Repositories
 In this Section we detail the main components of our Full Pipeline which can be used independently. Each repository contains an example of how to execute the code.
 
@@ -19,8 +40,9 @@ ments.txt in our adapted P-HNN version:
 Link to repositories:
 - Original P-HNN repository [[link]](https://adampharrison.gitlab.io/p-hnn/).
 - Our adapted P-HNN version [[link]](https://github.com/covid-vr/p-hnn-lung-segmentation).
-- Model Weights [[link]](https://drive.google.com/file/d/1l6yLFScULNw-oVoark0KZ-wnDFX8zwrN/view?usp=sharing).
-
+- Model Weights (Lost link).
+<!-- Model Weights [[link]](https://drive.google.com/file/d/1l6yLFScULNw-oVoark0KZ-wnDFX8zwrN/view?usp=sharing).
+-->
 ### Visualization Repositories
 Minimum required libraries:
 - CMake 3.17
@@ -40,8 +62,9 @@ Required minimum versions (the complete requirements are in the repository link)
 - TensorFlow 2.0
 Link to repositories:
 - Repository for train and validation: [[link]](https://github.com/covid-vr/covid-vr-network).
-- Model weights (For the two views) [[link]](https://drive.google.com/drive/folders/1OXTliIhm7yGuBDIL7qZhQrjCoaxmGx0l).
+- Model weights (For the two views) (Link Lost).
 
-### Additional Resources
+<!--### Additional Resources
 - Repository for get metrics (accuracy, precision, f1-measure, etc) and generate graphics used in this work [[link]](https://github.com/covid-vr/model-evaluation-metrics).
 - Repository to generate Grad-CAM visualizations [[link]](https://github.com/covid-vr/covid-vr-grad-cam).
+-->

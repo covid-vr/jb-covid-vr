@@ -5,7 +5,7 @@ Compile Jupyter Book
 The conda environment is provided as `environment.yml`. This environment is used for all testing by Github Actions and can be setup by:
 
 1. `conda env create -f environment.yml`
-2. `conda activate qe-mini-example`
+2. `conda activate jb-env`
 
 ### Building a Jupyter Book
 
