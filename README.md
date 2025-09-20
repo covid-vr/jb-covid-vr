@@ -1,4 +1,4 @@
-Compile Jupyter Book
+Compile Jupyter Book for our project
 
 ### Creating an Conda Environment
 
